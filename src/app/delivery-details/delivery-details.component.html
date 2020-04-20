@@ -1,0 +1,22 @@
+
+<div class="data-container" *ngIf="delivery">
+  <h3>Detalles de la entrega</h3>
+  <p *ngIf="delivery.name">
+    Nombre: {{ delivery.name }}
+  </p>
+  <p *ngIf="delivery.direction">
+    Dirección: {{ delivery.direction }}
+  </p>
+  <p *ngIf="delivery.precaution">
+    Precauciones: {{ delivery.precaution }}
+  </p>
+  <div class="container">
+  <button (click)="confirmDelivery(delivery)">Completada</button>
+  </div>
+</div>
+
+<div>
+
+  <a class="pagination-previous" [routerLink]="['/driver']" >Atrás</a>
+    
+  </div>

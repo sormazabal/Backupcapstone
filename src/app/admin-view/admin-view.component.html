@@ -1,0 +1,23 @@
+<div class = "container">
+    <h3>Entregas</h3>
+  </div>
+  <table class="admin-table">
+    <tr>
+      <th>Id Entrega</th>
+      <th>Nombre</th>
+      <th>Estado</th>
+    </tr>
+    <tr *ngFor="let delivery of deliveries;index as deliveryId">
+    <td>{{ deliveryId }}</td>
+    <td>{{ delivery.name }}</td>
+    <td *ngIf="delivery.status; else notDone">
+      <i class="material-icons check-icon">done</i>
+    </td>
+    <ng-template #notDone>
+    <td><i class="material-icons uncheck-icon">remove_circle_outline</i></td>
+    </ng-template>
+    </tr> 
+  </table>
+  <div class = "container">
+      <button (click)="reset()">Reiniciar</button>
+    </div>

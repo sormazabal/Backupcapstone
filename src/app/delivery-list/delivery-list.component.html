@@ -1,0 +1,20 @@
+<div class = "container">
+  <h3>Entregas</h3>
+</div>
+
+
+<div *ngFor="let delivery of deliveries;index as deliveryId">
+
+  
+  <a class = "delivery-item" [title]="' Detalles Entrega '+deliveryId " [routerLink]="['/deliveries', deliveryId]">
+    Entrega {{ deliveryId }}
+  </a>
+
+
+</div>
+
+<div>
+
+<a class="pagination-previous" [routerLink]="['/driver']" >Atrás</a>
+  
+</div>
