@@ -1,1 +1,21 @@
-<p>delivery-pending works!</p>
+<div class="data-container" *ngIf="delivery">
+    <h2>Entrega:</h2>
+    <p *ngIf="delivery.name">
+      Nombre: {{ delivery.name }}
+    </p>
+    <h2>Marcar como pendiente</h2>
+    <h3>Razón:</h3>
+
+
+
+    <div class="container"class="container">
+    <button (click)="confirmDelivery(delivery)">Enviar</button>  
+    </div>
+  
+    
+  
+  <div class="container">
+  
+    <a class="pagination-previous" [routerLink]="['/driver']" >Atrás</a>
+      
+    </div>

@@ -20,5 +20,9 @@ export class DeliveryDetailsComponent implements OnInit {
     delivery.status='done';
     window.alert('La entrega ha sido realizada!');
   }
+  pendingDelivery(delivery) {
+    delivery.status='pending';
+    window.alert('La entrega ha sido marcada como pendiente!');
+  }
 
 }

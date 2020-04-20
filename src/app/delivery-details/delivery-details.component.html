@@ -15,7 +15,8 @@
   </div>
 
   <div class="container">
-  <button class= "button" [routerLink]="['/pending-delivery']">Pendiente</button>
+    <button (click)="pendingDelivery(delivery)" [routerLink]="['/pending', deliveryId]" >Pendiente</button>  
+    
 </div>
 
 <div class="container">
