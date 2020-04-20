@@ -10,12 +10,15 @@
   <p *ngIf="delivery.precaution">
     Precauciones: {{ delivery.precaution }}
   </p>
-  <div class="container">
-  <button (click)="confirmDelivery(delivery)">Completada</button>
+  <div class="container"class="container">
+  <button (click)="confirmDelivery(delivery)">Completada</button>  
   </div>
+
+  <div class="container">
+  <button class= "button" [routerLink]="['/pending-delivery']">Pendiente</button>
 </div>
 
-<div>
+<div class="container">
 
   <a class="pagination-previous" [routerLink]="['/driver']" >Atrás</a>
     

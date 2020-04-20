@@ -9,6 +9,8 @@ import { DeliveryDetailsComponent } from './delivery-details/delivery-details.co
 import { HomeComponent } from './home/home.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
 
+import { DeliveryPendingComponent } from './delivery-pending/delivery-pending.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { AdminViewComponent } from './admin-view/admin-view.component';
     DeliveryListComponent,
     DeliveryDetailsComponent,
     HomeComponent,
-    AdminViewComponent
+    AdminViewComponent,
+    
+    DeliveryPendingComponent
   ],
   imports: [
     BrowserModule,
