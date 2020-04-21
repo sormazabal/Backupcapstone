@@ -13,7 +13,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
                         { path: 'admin', component: AdminViewComponent },
                         { path: 'deliveries/:deliveryId', component: DeliveryDetailsComponent },
                          { path: 'deliveries/:deliveryId', component: DeliveryDetailsComponent },
-                         { path: 'deliveries/:deliveryId/pending', component: DeliveryPendingComponent },
+                         { path: 'pending/:deliveryId', component: DeliveryPendingComponent },
 
 
 ];

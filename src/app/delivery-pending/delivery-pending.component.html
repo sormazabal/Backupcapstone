@@ -1,21 +1,43 @@
 <div class="data-container" *ngIf="delivery">
     <h2>Entrega:</h2>
     <p *ngIf="delivery.name">
-      Nombre: {{ delivery.name }}
+        Nombre: {{ delivery.name }}
     </p>
     <h2>Marcar como pendiente</h2>
     <h3>Razón:</h3>
 
 
 
-    <div class="container"class="container">
-    <button (click)="confirmDelivery(delivery)">Enviar</button>  
+    <label class="radio">
+          <input type="radio" name="answer">
+          Fallecido
+        </label>
+    <label class="radio">
+          <input type="radio" name="answer">
+          Ausencia
+        </label>
+    <label class="radio">
+            <input type="radio" name="answer">
+           Paciente rechaza entrega
+          </label>
+    <label class="radio">
+            <input type="radio" name="answer">
+            Otro
+          </label>
+
+
+    <div class="container" class="container">
+
+        <button class="button" (click)="pendingDelivery(delivery)" [routerLink]="['/driver' ]">Enviar</button>
     </div>
-  
-    
-  
-  <div class="container">
-  
-    <a class="pagination-previous" [routerLink]="['/driver']" >Atrás</a>
-      
-    </div>
+
+</div>
+
+
+
+
+<div class="container">
+
+    <a class="pagination-previous" [routerLink]="['/driver']">Atrás</a>
+
+</div>

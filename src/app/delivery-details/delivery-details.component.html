@@ -1,26 +1,26 @@
-
 <div class="data-container" *ngIf="delivery">
-  <h3>Detalles de la entrega</h3>
-  <p *ngIf="delivery.name">
-    Nombre: {{ delivery.name }}
-  </p>
-  <p *ngIf="delivery.direction">
-    Dirección: {{ delivery.direction }}
-  </p>
-  <p *ngIf="delivery.precaution">
-    Precauciones: {{ delivery.precaution }}
-  </p>
-  <div class="container"class="container">
-  <button (click)="confirmDelivery(delivery)">Completada</button>  
-  </div>
+    <h3>Detalles de la entrega</h3>
+    <p *ngIf="delivery.name">
+        Nombre: {{ delivery.name }}
+    </p>
+    <p *ngIf="delivery.direction">
+        Dirección: {{ delivery.direction }}
+    </p>
+    <p *ngIf="delivery.precaution">
+        Precauciones: {{ delivery.precaution }}
+    </p>
+    <div class="container" class="container">
+        <button (click)="confirmDelivery(delivery)">Completada</button>
+    </div>
 
-  <div class="container">
-    <button (click)="pendingDelivery(delivery)" [routerLink]="['/pending', delivery]" >Pendiente</button>  
-    
-</div>
+    <div class="container">
 
-<div class="container">
+        <button class="button" [routerLink]="['/pending', delivery.id ]">Pendiente</button>
 
-  <a class="pagination-previous" [routerLink]="['/driver']" >Atrás</a>
-    
-  </div>
+    </div>
+
+    <div class="container">
+
+        <a class="pagination-previous" [routerLink]="['/driver']">Atrás</a>
+
+    </div>

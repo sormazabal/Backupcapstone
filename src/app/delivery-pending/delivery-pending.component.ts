@@ -15,9 +15,10 @@ export class DeliveryPendingComponent implements OnInit {
     this.delivery = deliveries[+params.get('deliveryId')];
   });
   }
-  confirmDelivery(delivery) {
+  pendingDelivery(delivery) {
     delivery.status='done';
     window.alert('La entrega ha sido marcada como pendiente!');
+    
 }}
 
 
